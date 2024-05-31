@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Hotel_Management.Models.Search>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+
+
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Booking.Booking_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Guest.First_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Room.Room_Type)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Booking.Booking_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Guest.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Room.Room_Type)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.T_Person }) |
+                @Html.ActionLink("Details", "Details", new { id = item.T_Person }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.T_Person })
+            </td>
+        </tr>
+    }
+
+</table>*@
+
+
+<!-- Search Bar -->
+<!-- Search Results Table -->

@@ -1,0 +1,54 @@
+﻿@model Hotel_Management.Models.Room
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container1 bg-black">
+    <div class="main1 ">
+
+        <div>
+            <h2 class="text-decoration-underline ps-3 pt-3">Details of Booking</h2>
+            <hr />
+            <dl class="dl-horizontal">
+                <div class="container ps-4 pb-3">
+                    <div class="row g-2">
+
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Room_Type)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Room_Type)
+                            </dd>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Price_Per_Night)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Price_Per_Night)
+                            </dd>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Availability)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Availability)
+                            </dd>
+                        </div>
+
+
+                    </div>
+                    </div>
+            </dl>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Room_ID }, new { @class = "btn btn-success mt-2 fw-bold" }) |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-success text-white mt-2 bg-primary fw-bold" })
+</p>

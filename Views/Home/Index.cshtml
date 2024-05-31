@@ -1,0 +1,114 @@
+﻿@model IEnumerable<Hotel_Management.Models.Booking>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="@Url.Content("/Content/StyleSheet2.css")" rel="stylesheet" />
+</head>
+<body>
+
+   
+           
+                       <div class="container bg-black space bg-opacity-50 align-items-center justify-content-center text-center pt-5 pb-5 rounded">
+                           <h1 class="text-center text-white mt-5 pb-4 ">WELCOME TO LUXESTAY</h1>
+                           <button class="btn but px-4 mb-5 py-2 fw-bold fs-5" onclick="location.href='/Rooms'">Book Now</button>
+                       </div>
+                  
+
+
+    <!-- Search Bar -->
+    <!-- Search Results Table -->
+                       <div class="mt-5">
+                           <div class="mt-5">
+                               @if (Model != null && Model.Any())
+                               {
+                                   <div class="container_rec bg-black bg-opacity-75 ps-3 pb-1">
+                                       <h3 class="pt-3 mb-4 text-decoration-underline">Records:</h3>
+                                       <table class="table table-striped text-white mb-4">
+
+                                           <thead>
+                                               <tr>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Booking_ID)</th>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Guest.First_Name)</th>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Guest.Last_Name)</th>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Room.Room_Type)</th>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Room.Price_Per_Night)</th>
+
+                                                   <th>@Html.DisplayNameFor(model => model.First().Check_In_Date)</th>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Check_Out_Date)</th>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Total_Price)</th>
+                                                   <th></th>
+                                               </tr>
+                                           </thead>
+                                           <tbody>
+                                               @foreach (var item in Model)
+                                               {
+                                                   <tr class="text-white">
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Booking_ID)</td>
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Guest.First_Name)</td>
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Guest.Last_Name)</td>
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Room.Room_Type)</td>
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Room.Price_Per_Night)</td>
+
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Check_In_Date)</td>
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Check_Out_Date)</td>
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Total_Price)</td>
+
+                                                   </tr>
+                                               }
+                                           </tbody>
+                                       </table>
+                                
+                                   <div class="text-start">
+                                       <table class="table table-striped  text-white mb-5">
+                                           <thead>
+                                               <tr>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Room.Availability)</th>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Guest.Phone_Number)</th>
+                                                   <th>@Html.DisplayNameFor(model => model.First().Guest.Email)</th>
+                                                   <th></th>
+                                               </tr>
+                                           </thead>
+                                           <tbody>
+                                               @foreach (var item in Model)
+                                               {
+                                                   <tr class="text-white">
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Room.Availability)</td>
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Guest.Phone_Number)</td>
+                                                       <td class="text-white">@Html.DisplayFor(modelItem => item.Guest.Email)</td>
+                                                   </tr>
+                                               }
+                                           </tbody>
+                                       </table>
+                                   </div>
+
+                               </div>
+
+
+
+
+
+
+
+                                  
+                               }
+                               else
+                               {
+                                   <p class="mt-4 bg-black bg-opacity-50 text-center fs-4 fw-bold">No records found</p>
+                               }
+                           </div>
+                       </div>
+
+</body>
+</html>
+

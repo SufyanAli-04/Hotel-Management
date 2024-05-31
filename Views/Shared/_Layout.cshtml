@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Hotel Management</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="@Url.Content("/Content/StyleSheet2.css")" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="Homeimg">
+        <div class="box">
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand nav1 text-white fw-bold fs-1 " href="#" onclick="location.href='/Home'">LuxeStay</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                    <div class="collapse navbar-collapse nav2" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="hov">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link text-white fw-bold" })</li>
+                            <li class="hov">@Html.ActionLink("Rooms", "Index", "Rooms", new { area = "" }, new { @class = "nav-link text-white fw-bold" })</li>
+                            <li class="hov">@Html.ActionLink("Guests", "Index", "Guests", new { area = "" }, new { @class = "nav-link text-white fw-bold" })</li>
+                            <li class="hov">@Html.ActionLink("Bookings", "Index", "Bookings", new { area = "" }, new { @class = "nav-link text-white fw-bold" })</li>
+                            
+                        </ul>
+                        <div class="ps-2">
+                            <form action="@Url.Action("Search", "Home")" method="get" class=" d-flex align-items-center justify-content-center">
+                                <input type="text" name="query" placeholder="  Column name or ID..." class="form-control border-0 rounded-start rounded-0 align-items-center p-0 px-1 m-0 py-1" />
+                                <input type="submit" value="Search" class="btn btn-primary rounded-0 p-0 px-2 py-1 rounded-end text-white bg-black" />
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+            </div>
+
+
+
+        </div>
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+
+    
+</body>
+</html>

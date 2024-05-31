@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Hotel_Management.Models.Room>
+
+@{
+    ViewBag.Title = "Rooms";
+}
+<h2>Rooms</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.First().Room_Type)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Is_Available)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Price)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Room_Type)</td>
+                <td>@Html.DisplayFor(modelItem => item.Is_Available)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+            </tr>
+        }
+    </tbody>
+</table>

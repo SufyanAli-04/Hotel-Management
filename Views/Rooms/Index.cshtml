@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Hotel_Management.Models.Room>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<p class="btn text-white btn-success ">
+    @Html.ActionLink("Book New Room", "Create", null, new { @class = "btn btn-success text-white" })
+</p>
+<div class="container1 bg-black">
+    <div class="main1 ">
+        <h2 class="text-decoration-underline ps-3 py-3">Records:</h2>
+        <table class="table text-white fw-bold room text-center">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Room_Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price_Per_Night)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Availability)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Room_Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price_Per_Night)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Availability)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Room_ID }, new { @class = "btn btn-success" }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Room_ID }, new { @class = "btn btn-primary" }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Room_ID }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+<div class="text-center ">
+    
+    <button class=" but1 px-4 mb-5 py-2 fw-bold fs-5 border-0 rounded" onclick="location.href='/Guests'">Next</button>
+
+</div>

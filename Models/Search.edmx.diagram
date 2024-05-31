@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="79304cae93d64370b337db96c3cfe7ff" Name="Diagram1">
+        <EntityTypeShape EntityType="ClassModel1.Booking" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassModel1.Guest" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassModel1.Room" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClassModel1.Search" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="ClassModel1.FK__Booking__Guest_I__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassModel1.FK__Booking__Room_ID__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassModel1.FK__Search__Booking___6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassModel1.FK__Search__Guest_ID__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="ClassModel1.FK__Search__Rooms_ID__71D1E811" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

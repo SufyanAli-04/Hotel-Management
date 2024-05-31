@@ -1,0 +1,42 @@
+﻿@model Hotel_Management.Models.Search
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Search</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Booking.Booking_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Booking.Booking_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Guest.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guest.First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.Room_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Room.Room_Type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.T_Person }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

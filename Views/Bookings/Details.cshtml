@@ -1,0 +1,78 @@
+﻿@model Hotel_Management.Models.Booking
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container1 bg-black">
+    <div class="main1 ">
+
+        <div>
+            <h2 class="text-decoration-underline ps-3 pt-3">Details of Booking</h2>
+            <hr />
+
+
+
+            <dl class="dl-horizontal">
+
+                <div class="container ps-4 pb-3">
+                    <div class="row g-2">
+
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Check_In_Date)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Check_In_Date)
+                            </dd>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Check_Out_Date)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Check_Out_Date)
+                            </dd>
+                        </div>
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Total_Price)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Total_Price)
+                            </dd>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Room.Room_Type)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Room.Room_Type)
+                            </dd>
+                        </div>
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Guest.First_Name)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Guest.First_Name)
+                            </dd>
+                        </div>
+
+                    </div>
+                </div>
+
+            </dl>
+
+        </div>
+    </div>
+</div>
+      
+                <p class="form-actions no-color">
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Booking_ID }, new { @class= "btn btn-success mt-2 fw-bold" }) |
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-success text-white mt-2 bg-primary fw-bold" })
+                </p>

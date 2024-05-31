@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Hotel_Management.Models.Guest>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create",null, new { @class = "btn btn-success text-white" })
+</p>
+<div class="container1">
+    <div class="main2">
+        <h2 class="text-decoration-underline ps-3 py-3">Records:</h2>
+        <table class="table text-white fw-bold text-center">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.First_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Last_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phone_Number)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.First_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Last_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone_Number)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Guest_ID }, new { @class = "btn btn-success" }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Guest_ID }, new { @class = "btn btn-primary" }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Guest_ID }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+<div class="text-center ">
+
+    <button class=" but1 px-4 mb-5 py-2 fw-bold fs-5 border-0 rounded" onclick="location.href='/Rooms'">Previous</button>
+    <button class=" but1 px-4 mb-5 py-2 fw-bold fs-5 border-0 rounded" onclick="location.href='/Bookings'">Next</button>
+
+</div>
+

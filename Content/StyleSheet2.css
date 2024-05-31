@@ -1,0 +1,98 @@
+﻿
+
+body {
+    color: white;
+    overscroll-behavior:contain;
+    background-color: black;
+    background-image: url('../images/database image.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.navbar-toggler {
+    background-color: white;
+}
+.space{
+    margin-top: 50px;
+    margin-bottom: 140px;
+}
+.container-rec{
+    margin-top: 200px;
+}
+
+.Homeimg {
+    background-position: center center;
+    height: 100vh;
+    filter: brightness(0.85);
+}
+.btn {
+    border:none;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.but1 {
+    background-color: black;
+    color: white;
+}
+.but{
+    background-color: white;
+}
+.but:hover{
+    background-color: black;
+}
+.hov:hover{
+    color: black;
+}
+.good{
+    
+    opacity:1;
+}
+.search1{
+    display: flex;
+    flex-direction:row;
+    column-gap: 5px;
+    align-items: baseline;
+    text-align: center;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row; */
+    justify-content: center;
+}
+
+.nav1 {
+    margin-left: 20px;
+}
+.nav2{
+    margin-right: 54px;
+}
+.container2{
+    background-color: black;
+    opacity: 0.6;
+}
+footer{
+    
+   background-color:black;
+   padding: 35px;
+   font-size: 18px;
+   position: absolute;
+   left:0;
+   right: 0;
+   top:0;
+
+    
+}
+footer p{
+    z-index:1;
+}
+.last {
+    
+    z-index: 10;
+}
+.container1{
+    --bs-bg-opacity: .6;
+    background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+    border-radius: 4px;
+}
+.main1{
+    z-index:0;
+}

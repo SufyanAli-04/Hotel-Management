@@ -1,0 +1,17 @@
+﻿footer{
+    font-size: 30px;
+    margin-top: 280px;
+    margin-bottom: 0;
+    background-color: sandybrown;
+}
+.Homeimg {
+    object-fit: cover;
+    opacity: 0.64;
+    background-image: url('../images/database image.jpg');
+}
+rec{
+    background-color: grey;
+}
+
+
+    

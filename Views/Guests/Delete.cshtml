@@ -1,0 +1,67 @@
+﻿@model Hotel_Management.Models.Guest
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container1 bg-black">
+    <div class="main1 ">
+
+        <h2 class="text-decoration-underline ps-3 pt-3">Guest Booking</h2>
+        <div>
+            <h3 class="ps-3">Are you sure you want to delete this?</h3>
+            <hr />
+            <dl class="dl-horizontal">
+                <div class="container ps-4 pb-3">
+                    <div class="row g-2">
+
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.First_Name)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.First_Name)
+                            </dd>
+                        </div>
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Last_Name)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Last_Name)
+                            </dd>
+                        </div>
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Email)
+                            </dd>
+                        </div>
+                        <div class="col-lg-6">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Phone_Number)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Phone_Number)
+                            </dd>
+                        </div>
+
+
+                    </div>
+                </div>
+            </dl>
+        </div>
+    </div>
+</div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-success mt-2 fw-bold ms-3 mb-3" /> |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-success text-white mt-2 bg-primary fw-bold mb-3" })
+        </div>
+    }
+
